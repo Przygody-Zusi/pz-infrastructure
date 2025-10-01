@@ -1,0 +1,18 @@
+apiVersion: agroproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pz-backend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/Przygody-Zusi/pz-infrastructure'
+    targetVersion: main
+    path: charts/pz-backend
+  destionation:
+    server: 'https://kubernetes.default.svc'
+    namespace: pz-backend
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

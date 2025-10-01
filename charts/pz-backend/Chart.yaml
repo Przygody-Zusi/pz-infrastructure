@@ -1,6 +1,6 @@
 apiVersion: v2
 name: pz-backend
-description: A Helm chart for Kubernetes
+description: FastAPI backend deployment for Przygody Zusi services
 
 # A chart can be either an 'application' or a 'library' chart.
 #
