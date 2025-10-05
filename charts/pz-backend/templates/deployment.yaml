@@ -52,7 +52,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: backend-secret
-                  key: api_key
+                  key: GEMINI_API_KEY
           livenessProbe:
             {{- toYaml . | nindent 12 }}
           {{- end }}
